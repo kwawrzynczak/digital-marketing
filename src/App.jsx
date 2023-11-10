@@ -1,5 +1,7 @@
+import MainTemplate from './templates/MainTemplate'
+
 function App() {
-    return <div>Hello World</div>
+    return <MainTemplate />
 }
 
 export default App
