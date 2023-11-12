@@ -1,7 +1,7 @@
 const NavbarTab = ({ name, path }) => {
   return (
-    <div>
-      <span>{name}</span>
+    <div className="p-2">
+      <span className="font-semibold uppercase text-blue-950">{name}</span>
     </div>
   );
 };
