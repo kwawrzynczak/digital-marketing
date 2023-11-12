@@ -1,7 +1,7 @@
-import MainTemplate from './templates/MainTemplate'
+import MainTemplate from './templates/MainTemplate';
 
 function App() {
-    return <MainTemplate />
+  return <MainTemplate></MainTemplate>;
 }
 
-export default App
+export default App;

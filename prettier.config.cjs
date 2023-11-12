@@ -1,17 +1,15 @@
-const tailwindPlugin = require('prettier-plugin-tailwindcss')
-
 module.exports = {
-    plugins: [tailwindPlugin],
-    printWidth: 100,
-    tabWidth: 2,
-    useTabs: false,
-    semi: true,
-    singleQuote: true,
-    quoteProps: 'as-needed',
-    jsxSingleQuote: false,
-    trailingComma: 'all',
-    bracketSpacing: true,
-    bracketSameLine: false,
-    arrowParens: 'always',
-    singleAttributePerLine: false,
-}
+  plugins: ['prettier-plugin-tailwindcss'],
+  printWidth: 100,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  quoteProps: 'as-needed',
+  jsxSingleQuote: false,
+  trailingComma: 'all',
+  bracketSpacing: true,
+  bracketSameLine: false,
+  arrowParens: 'always',
+  singleAttributePerLine: false,
+};

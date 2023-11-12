@@ -1,5 +1,20 @@
-const Navbar = () => {
-    return <div>Navbar</div>
-}
+const tabs = [
+  {
+    name: 'About',
+    path: '/about',
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+  },
+];
 
-export default Navbar
+const Navbar = () => {
+  return (
+    <div>
+      <span>Home</span>
+    </div>
+  );
+};
+
+export default Navbar;
