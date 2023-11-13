@@ -14,7 +14,7 @@ const NavbarTab = ({ name, path }) => {
         )
       }
     >
-      <span className="font-bold uppercase transition-all duration-300 group-hover:-translate-x-3">
+      <span className="font-bold uppercase transition-all duration-500 group-hover:-translate-x-3">
         {name}
       </span>
       {path === '/tickets' && (
