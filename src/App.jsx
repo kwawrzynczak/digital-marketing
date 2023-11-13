@@ -5,6 +5,7 @@ import Attractions from './pages/Attractions';
 import Gallery from './pages/Gallery';
 import Tickets from './pages/Tickets';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/tickets" element={<Tickets />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </MainTemplate>
     </BrowserRouter>

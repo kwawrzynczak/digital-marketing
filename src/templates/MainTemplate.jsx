@@ -1,10 +1,14 @@
 import Navbar from '../components/Navbar';
 
-const MainTemplate = ({ children }) => (
-  <div className="flex min-h-screen bg-slate-400">
-    <Navbar />
-    <div>{children}</div>
-  </div>
-);
+const MainTemplate = ({ children }) => {
+  console.log(children);
+  return (
+    <div className="flex min-h-screen flex-col bg-slate-100">
+      <Navbar />
+
+      <div className="w-8/12 self-center px-12 py-20">{children}</div>
+    </div>
+  );
+};
 
 export default MainTemplate;

@@ -3,7 +3,7 @@ import { HomeIcon } from '@heroicons/react/20/solid';
 
 const tabs = [
   {
-    name: <HomeIcon className="h-7 w-7" />,
+    name: <HomeIcon className="h-6 w-6" />,
     path: '/',
   },
   {
