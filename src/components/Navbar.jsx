@@ -19,14 +19,14 @@ const tabs = [
     path: '/contact',
   },
   {
-    name: 'Kup bilet online',
+    name: 'Kup bilety',
     path: '/tickets',
   },
 ];
 
 const Navbar = () => {
   return (
-    <div className="flex h-12 min-w-full items-center justify-end gap-12 bg-blue-300 px-12">
+    <div className="flex min-w-full items-center justify-end gap-12 bg-blue-300 px-12">
       {tabs.map(({ name, path }) => (
         <NavbarTab key={name} name={name} path={path} />
       ))}
