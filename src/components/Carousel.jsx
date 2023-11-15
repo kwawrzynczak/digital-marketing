@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { ArrowRightCircleIcon, ArrowLeftCircleIcon } from '@heroicons/react/20/solid';
 
 const images = [
-  { id: 1, img: 'https://loremflickr.com/1280/600' },
-  { id: 2, img: 'https://loremflickr.com/1280/600' },
-  { id: 3, img: 'https://loremflickr.com/1280/600' },
-  { id: 4, img: 'https://loremflickr.com/1280/600' },
+  { id: 1, src: 'https://loremflickr.com/1280/600' },
+  { id: 2, src: 'https://loremflickr.com/1280/600' },
+  { id: 3, src: 'https://loremflickr.com/1280/600' },
+  { id: 4, src: 'https://loremflickr.com/1280/600' },
 ];
 
 const Carousel = () => {
@@ -30,7 +30,7 @@ const Carousel = () => {
         {images.map((image) => (
           <img
             key={image.id}
-            src={image.img}
+            src={image.src}
             alt="Carousel"
             className={`absolute left-0 top-0 h-full w-full object-cover transition-all duration-300 ${
               image === currentImage ? 'opacity-100' : 'opacity-0'
