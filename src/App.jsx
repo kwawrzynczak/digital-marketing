@@ -6,6 +6,10 @@ import Gallery from './pages/Gallery';
 import Tickets from './pages/Tickets';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import FAQ from './pages/FAQ';
+import Regulations from './pages/Regulations';
+import Prices from './pages/Prices';
+import Events from './pages/Events';
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/tickets" element={<Tickets />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/regulations" element={<Regulations />} />
+          <Route path="/prices" element={<Prices />} />
+          <Route path="/events" element={<Events />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </MainTemplate>

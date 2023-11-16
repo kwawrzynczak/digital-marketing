@@ -26,7 +26,7 @@ const tabsLeft = [
 ];
 const tabsRight = [
   {
-    name: 'Regulamin',
+    name: 'Regulaminy',
     path: '/regulations',
   },
   {

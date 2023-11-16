@@ -1,9 +1,8 @@
 const Contact = () => {
   return (
-    <div className="grid columns-3xl grid-cols-2">
-      <div>1</div>
-      <div>23</div>
-    </div>
+    <>
+      <h1 className="mb-20 text-center text-4xl font-bold text-blue-950">Kontakt</h1>
+    </>
   );
 };
 
