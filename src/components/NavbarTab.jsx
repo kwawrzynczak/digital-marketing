@@ -8,17 +8,19 @@ const NavbarTab = ({ name, path, className }) => {
       to={path}
       className={({ isActive }) =>
         twMerge(
-          'my-2 flex items-center justify-center px-4 text-blue-950 transition-all duration-300',
+          'mx-6 flex h-20 items-center justify-center border-b-2 border-transparent text-blue-950 transition-all duration-300 hover:text-blue-600',
+          isActive && 'border-b-4 border-blue-600 text-blue-600',
           path === '/tickets' &&
-            'group relative mx-4 w-40 justify-self-end rounded-lg bg-amber-500 p-3 text-white hover:bg-amber-600',
+            'group relative ml-6 h-12 w-40 self-center justify-self-end rounded-lg border-transparent bg-amber-500 p-3 text-white hover:bg-amber-600 hover:text-white',
           className,
         )
       }
     >
       <span
         className={twMerge(
-          'font-semibold tracking-wide transition-all duration-500 hover:text-blue-800 group-hover:-translate-x-3',
+          'font-semibold tracking-wide transition-all duration-500 group-hover:-translate-x-3',
           path === '/tickets' && 'font-bold hover:text-white',
+          path === '/' && 'box-content rounded-full border p-2.5 hover:border-blue-600',
         )}
       >
         {name}
