@@ -1,15 +1,15 @@
+import Attractions from './pages/Attractions';
+import Contact from './pages/Contact';
+import Events from './pages/Events';
+import FAQ from './pages/FAQ';
+import Gallery from './pages/Gallery';
+import Homepage from './pages/Homepage';
+import NotFound from './pages/NotFound';
+import Prices from './pages/Prices';
+import Regulations from './pages/Regulations';
+import Tickets from './pages/Tickets';
 import MainTemplate from './templates/MainTemplate';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Homepage from './pages/Homepage';
-import Attractions from './pages/Attractions';
-import Gallery from './pages/Gallery';
-import Tickets from './pages/Tickets';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
-import FAQ from './pages/FAQ';
-import Regulations from './pages/Regulations';
-import Prices from './pages/Prices';
-import Events from './pages/Events';
 
 function App() {
   return (
