@@ -1,10 +1,10 @@
+import { Fragment } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-const schedules = [
+const scheduleDescriptions = [
   {
     name: 'normalna',
-    description:
-      'Obowiązuje w dni powszednie od od poniedziałku do piątku poza okresem wakacyjnym.',
+    description: 'Obowiązuje w dni powszednie od poniedziałku do piątku poza okresem wakacyjnym.',
   },
   { name: 'weekendowa', description: 'Obowiązuje we wszystkie weekendy i święta.' },
   {
@@ -14,7 +14,7 @@ const schedules = [
   },
 ];
 
-const PricingTable = ({ active = false, name = null, pricing }) => {
+const PricingTable = ({ active = false, name = null, data, categories, sport = false }) => {
   return (
     <div className="mb-10">
       {active && (
@@ -26,14 +26,14 @@ const PricingTable = ({ active = false, name = null, pricing }) => {
       )}
       <div
         className={twMerge(
-          'flex bg-white',
-          active ? 'rounded-b-xl border-4 border-blue-600' : 'rounded-lg',
+          'flex border-4 bg-white',
+          active ? 'rounded-b-xl border-blue-600' : 'rounded-xl border-blue-200',
         )}
       >
         {name && (
-          <div className="border-r-2 p-4">
+          <div className="w-1/2 border-r-2 p-4">
             <h2 className="text-xl font-bold text-blue-950">Taryfa {name}</h2>
-            <p>{schedules.find((schedule) => schedule.name === name).description}</p>
+            <p>{scheduleDescriptions.find((schedule) => schedule.name === name).description}</p>
             <p>Dodatkowa opłata za przekroczenie wykupionego czasu 1 PLN/MIN/os.</p>
             <span className="font-semibold text-blue-950">Godziny otwarcia:</span>
             <p>Poniedziałek - Czwartek 14:00 - 22:00</p>
@@ -43,25 +43,37 @@ const PricingTable = ({ active = false, name = null, pricing }) => {
         <table className="w-full">
           <thead className="text-blue-950">
             <tr className="border-b-2 border-slate-200">
-              <th className="font-semibold uppercase">Rodzaj biletu</th>
-              <th className="font-semibold uppercase">Bilet 1H</th>
-              <th className="font-semibold uppercase">Bilet 3H</th>
-              <th className="font-semibold uppercase">Cały dzień</th>
+              <th className="border-r font-semibold uppercase">Rodzaj biletu</th>
+              {categories.map((category, index) => (
+                <th key={index} className="border-r font-semibold uppercase">
+                  {category}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="font-semibold">Ulgowy / Rodzinny (cena za osobę)</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td className="font-semibold">Normalny</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+            {data.pricing.map((pricing, index) => (
+              <tr key={pricing.name} className="border text-center">
+                <td className="border-r font-semibold">{pricing.name}</td>
+                {pricing.prices.map(
+                  (price) =>
+                    (sport && index > 1 && (
+                      <td colSpan={2} key={price} className="border-r">
+                        {price}
+                      </td>
+                    )) ||
+                    (!sport && index > 1 && (
+                      <td colSpan={3} key={price} className="border-r">
+                        {price}
+                      </td>
+                    )) || (
+                      <td key={price} className="border-r">
+                        {price}
+                      </td>
+                    ),
+                )}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
