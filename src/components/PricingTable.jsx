@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const scheduleDescriptions = [
@@ -42,10 +41,16 @@ const PricingTable = ({ active = false, name = null, data, categories, sport = f
         )}
         <table className="w-full">
           <thead className="text-blue-950">
-            <tr className="border-b-2 border-slate-200">
-              <th className="border-r font-semibold uppercase">Rodzaj biletu</th>
+            <tr className="border-b-2">
+              <th className="font-semibold uppercase">Rodzaj biletu</th>
               {categories.map((category, index) => (
-                <th key={index} className="border-r font-semibold uppercase">
+                <th
+                  key={index}
+                  className={twMerge(
+                    'border-l-2 font-semibold uppercase',
+                    index === 1 && 'border-b-2',
+                  )}
+                >
                   {category}
                 </th>
               ))}
@@ -53,25 +58,25 @@ const PricingTable = ({ active = false, name = null, data, categories, sport = f
           </thead>
           <tbody>
             {data.pricing.map((pricing, index) => (
-              <tr key={pricing.name} className="border text-center">
-                <td className="border-r font-semibold">{pricing.name}</td>
-                {pricing.prices.map(
-                  (price) =>
-                    (sport && index > 1 && (
-                      <td colSpan={2} key={price} className="border-r">
-                        {price}
-                      </td>
-                    )) ||
-                    (!sport && index > 1 && (
-                      <td colSpan={3} key={price} className="border-r">
-                        {price}
-                      </td>
-                    )) || (
-                      <td key={price} className="border-r">
-                        {price}
-                      </td>
-                    ),
+              <tr
+                key={pricing.name}
+                className={twMerge(
+                  'border-b-2 text-center',
+                  index === data.pricing.length - 1 && 'border-none',
                 )}
+              >
+                <td className="border-r-2 font-semibold">{pricing.name}</td>
+                {pricing.prices.map((price, i) => (
+                  <td
+                    colSpan={(!sport && index > 1 && 3) || (sport && index > 1 && 2) || 1}
+                    key={price}
+                    className={twMerge(
+                      i === pricing.prices.length - 1 ? 'border-none' : 'border-r-2',
+                    )}
+                  >
+                    {price}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
