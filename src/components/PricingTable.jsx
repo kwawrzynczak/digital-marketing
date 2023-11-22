@@ -41,7 +41,7 @@ const PricingTable = ({ active = false, name = null, data, categories, sport = f
         )}
         <table className="w-full">
           <thead className="text-blue-950">
-            <tr className="border-b-2">
+            <tr className="h-12 border-b-2">
               <th className="font-semibold uppercase">Rodzaj biletu</th>
               {categories.map((category, index) => (
                 <th
@@ -61,17 +61,19 @@ const PricingTable = ({ active = false, name = null, data, categories, sport = f
               <tr
                 key={pricing.name}
                 className={twMerge(
-                  'border-b-2 text-center',
+                  'h-16 border-b-2 text-center',
                   index === data.pricing.length - 1 && 'border-none',
                 )}
               >
-                <td className="border-r-2 font-semibold">{pricing.name}</td>
+                <td className="max-w-[200px] border-r-2 font-semibold">{pricing.name}</td>
                 {pricing.prices.map((price, i) => (
                   <td
                     colSpan={(!sport && index > 1 && 3) || (sport && index > 1 && 2) || 1}
                     key={price}
                     className={twMerge(
-                      i === pricing.prices.length - 1 ? 'border-none' : 'border-r-2',
+                      i === pricing.prices.length - 1
+                        ? 'border-none'
+                        : 'min-w-[80px] max-w-[100px] border-r-2',
                     )}
                   >
                     {price}

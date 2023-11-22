@@ -59,9 +59,12 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <div className="logo absolute left-1/2 top-0 box-content w-36 -translate-x-1/2 rounded-full bg-white p-4">
+      <div
+        className="logo absolute left-1/2 top-0 box-content flex w-64 -translate-x-1/2 justify-center rounded-full bg-white px-6 pb-6"
+        style={{ clipPath: 'ellipse(38% 48% at 50% 40%)' }}
+      >
         <Link to="/">
-          <img src={'/logo.svg'} className="w-36" />
+          <img src={'/logo.png'} className="w-36" />
         </Link>
       </div>
     </>
