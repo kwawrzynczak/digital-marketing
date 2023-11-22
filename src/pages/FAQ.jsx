@@ -1,4 +1,24 @@
 /* eslint-disable react-refresh/only-export-components */
+import FaqTab from '../components/FaqTab';
+
+const questions = [
+  {
+    question: 'Is team pricing available?',
+    answer: 'Yes! You can purchase a license that you can share with your entire team.',
+  },
+  {
+    question: 'Is team pricing available?',
+    answer: 'Yes! You can purchase a license that you can share with your entire team.',
+  },
+  {
+    question: 'Is team pricing available?',
+    answer: 'Yes! You can purchase a license that you can share with your entire team.',
+  },
+  {
+    question: 'Is team pricing available?',
+    answer: 'Yes! You can purchase a license that you can share with your entire team.',
+  },
+];
 const FAQ = () => {
   return (
     <>
@@ -6,6 +26,11 @@ const FAQ = () => {
         FA<span className="text-amber-500">Q</span> -- Najczęściej{' '}
         <span className="text-amber-500">zadawane</span> pytania
       </h1>
+      <div className="flex flex-col items-start">
+        {questions.map(({ question, answer }) => (
+          <FaqTab key={question} question={question} answer={answer} />
+        ))}
+      </div>
     </>
   );
 };
