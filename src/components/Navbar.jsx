@@ -26,16 +26,16 @@ const tabsLeft = [
 ];
 const tabsRight = [
   {
-    name: 'Regulaminy',
-    path: '/regulations',
-  },
-  {
     name: 'Kontakt',
     path: '/contact',
   },
   {
     name: 'FAQ',
     path: '/faq',
+  },
+  {
+    name: 'Regulaminy',
+    path: '/regulations',
   },
   {
     name: 'Kup bilety',
@@ -60,11 +60,12 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className="logo absolute left-1/2 top-0 box-content flex w-64 -translate-x-1/2 justify-center rounded-full bg-white px-6 pb-6"
+        className="logo absolute left-1/2 top-0 box-content flex w-64 -translate-x-1/2 items-center justify-center rounded-full bg-white px-6 pb-6"
         style={{ clipPath: 'ellipse(38% 48% at 50% 40%)' }}
       >
-        <Link to="/">
-          <img src={'/logo.png'} className="w-36" />
+        <Link to="/" className="flex flex-col items-center p-4">
+          <img src={'/logo.svg'} className="w-20" />
+          <p className="text-center text-xl font-extrabold text-blue-600">Aquapark Falka</p>
         </Link>
       </div>
     </>
