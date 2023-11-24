@@ -34,8 +34,8 @@ const tabsRight = [
     path: '/faq',
   },
   {
-    name: 'Regulaminy',
-    path: '/regulations',
+    name: 'Opinie',
+    path: '/feedback',
   },
   {
     name: 'Kup bilety',

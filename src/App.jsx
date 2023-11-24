@@ -6,7 +6,7 @@ import Gallery from './pages/Gallery';
 import Homepage from './pages/Homepage';
 import NotFound from './pages/NotFound';
 import Prices from './pages/Prices';
-import Regulations from './pages/Regulations';
+import Feedback from './pages/Feedback';
 import Tickets from './pages/Tickets';
 import MainTemplate from './templates/MainTemplate';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -22,7 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/regulations" element={<Regulations />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="/prices" element={<Prices />} />
           <Route path="/events" element={<Events />} />
           <Route path="*" element={<NotFound />} />

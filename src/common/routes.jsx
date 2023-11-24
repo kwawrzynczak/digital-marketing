@@ -5,7 +5,7 @@ const routes = {
   gallery: '/gallery',
   tickets: '/tickets',
   FAQ: '/faq',
-  regulations: '/regulations',
+  feedback: '/feedback',
   prices: '/prices',
   events: '/events',
   notFound: '*',
