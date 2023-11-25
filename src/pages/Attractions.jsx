@@ -16,7 +16,7 @@ const Attractions = () => {
         Odkryj nasze <span className="text-amber-500">niezwykłe</span> wodne atrakcje
         <span className="text-amber-500">!</span>
       </h1>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
         {attractions.map((attraction) => (
           <AttractionTile key={attraction.name} name={attraction.name} />
         ))}
