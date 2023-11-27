@@ -28,7 +28,9 @@ const FeedbackItem = ({ name, title, date, stars, content }) => {
         </div>
         <div className="mr-10 flex w-full flex-col">
           <p className="mx-4 mb-4 text-xl font-semibold text-blue-950">{title}</p>
-          <span className="block w-full rounded border p-4 leading-7">{content}</span>
+          <span className="block w-full rounded border border-blue-400 p-4 leading-7">
+            {content}
+          </span>
         </div>
       </div>
     </div>

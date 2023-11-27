@@ -24,7 +24,7 @@ const feedbackList = [
     date: '2023-03-01',
     stars: 5,
     content:
-      'Nie spodziewałem się, że wizyta w Aquaparku może być tak satysfakcjonująca! Od momentu wejścia zostaliśmy przywitani uśmiechem personelu, co od razu stworzyło przyjazną atmosferę. Baseny i zjeżdżalnie były czyste i dobrze utrzymane. Dla dzieci były dostępne bezpieczne strefy, co sprawiło, że mogliśmy zrelaksować się, wiedząc, że są w dobrych rękach.',
+      'Nie spodziewałam się, że wizyta w Aquaparku może być tak satysfakcjonująca! Od momentu wejścia zostaliśmy przywitani uśmiechem personelu, co od razu stworzyło przyjazną atmosferę. Baseny i zjeżdżalnie były czyste i dobrze utrzymane. Dla dzieci były dostępne bezpieczne strefy, co sprawiło, że mogliśmy zrelaksować się, wiedząc, że są w dobrych rękach.',
   },
   {
     name: 'Maria Magdalena',

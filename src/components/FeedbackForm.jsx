@@ -10,13 +10,13 @@ const FeedbackForm = () => {
   };
   return (
     <>
-      <h2 className="mb-14 text-center text-3xl font-semibold text-blue-950">
+      <h2 className="mb-10 text-center text-3xl font-semibold text-blue-950">
         Podziel się swoją opinią!
       </h2>
-      <div className="grid grid-cols-2">
-        <div className="flex h-fit flex-col items-center justify-self-center rounded-xl bg-white px-12 py-6 shadow">
+      <div className="flex flex-col items-center">
+        <div className="flex h-fit flex-col text-center">
           <p className="mt-4 text-xl">Oceń wizytę:</p>
-          <div className="mt-2 flex">
+          <div className="mb-4 mt-2 flex">
             {starsList.map((star, index) => (
               <span
                 onClick={() => setStars(index)}
@@ -31,7 +31,7 @@ const FeedbackForm = () => {
             ))}
           </div>
         </div>
-        <div className="rounded-lg bg-white p-8 shadow">
+        <div className="w-[500px] rounded-lg border bg-white p-8 shadow">
           <form className="flex flex-col gap-1">
             <label>Imię i nazwisko</label>
             <input type="text" maxLength={50} className="px-2 py-1.5" />
