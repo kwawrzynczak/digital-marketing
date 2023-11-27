@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="w-full bg-white p-8 shadow ">
           <h2 className="text-3xl font-semibold text-blue-950">Dane kontaktowe</h2>
           <div className="-ml-8 mb-8 mt-4 h-1 w-16 bg-amber-500"></div>
-          <div className="flex h-full flex-col">
+          <div className="flex h-full flex-col gap-4">
             <div className="border-b border-gray-300 pb-8">
               <h3 className="mb-4 font-bold uppercase text-blue-600">Aquapark Falka</h3>
               <div className="flex justify-between">

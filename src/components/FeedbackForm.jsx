@@ -10,26 +10,28 @@ const FeedbackForm = () => {
   };
   return (
     <>
-      <h2 className="text-xl font-semibold">Podziel się swoją opinią</h2>
+      <h2 className="mb-14 text-center text-3xl font-semibold text-blue-950">
+        Podziel się swoją opinią!
+      </h2>
       <div className="grid grid-cols-2">
-        <div className="">
-          <p>Oceń wizytę:</p>
-          <div className="flex">
+        <div className="flex h-fit flex-col items-center justify-self-center rounded-xl bg-white px-12 py-6 shadow">
+          <p className="mt-4 text-xl">Oceń wizytę:</p>
+          <div className="mt-2 flex">
             {starsList.map((star, index) => (
               <span
                 onClick={() => setStars(index)}
                 key={star}
                 className={twMerge(
                   'cursor-pointer',
-                  index <= stars ? 'text-yellow-500' : 'text-gray-400',
+                  index <= stars ? 'text-amber-500' : 'text-gray-400',
                 )}
               >
-                <StarIcon className="h-6 w-6" />
+                <StarIcon className="h-10 w-10" />
               </span>
             ))}
           </div>
         </div>
-        <div>
+        <div className="rounded-lg bg-white p-8 shadow">
           <form className="flex flex-col gap-1">
             <label>Imię i nazwisko</label>
             <input type="text" maxLength={50} className="px-2 py-1.5" />
