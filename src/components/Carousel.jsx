@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import { ArrowRightCircleIcon, ArrowLeftCircleIcon } from '@heroicons/react/20/solid';
-import { Button } from 'flowbite-react';
+import { Carousel as FlowbiteCarousel } from 'flowbite-react';
 
 const images = [
   { id: 1, src: 'https://loremflickr.com/1280/600' },
@@ -10,26 +8,16 @@ const images = [
 ];
 
 const Carousel = () => {
-  const [currentImage, setCurrentImage] = useState(images[0]);
-
-  const handleLeftArrowClick = () => {
-    const currentIndex = images.indexOf(currentImage);
-    const nextIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    setCurrentImage(images[nextIndex]);
-  };
-
-  const handleRightArrowClick = () => {
-    const currentIndex = images.indexOf(currentImage);
-    const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    setCurrentImage(images[nextIndex]);
-  };
-
   return (
-    <>
-      <div>
-        <Button>Click me</Button>
-      </div>
-    </>
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-[500px]">
+      <FlowbiteCarousel>
+        <img src="https://flowbite.com/docs/images/carousel/carousel-1.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-2.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+      </FlowbiteCarousel>
+    </div>
   );
 };
 
