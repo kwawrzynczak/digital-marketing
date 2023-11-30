@@ -42,11 +42,8 @@ const tabsRight = [
 const Navbar = () => {
   return (
     <>
-      <div className="container flex min-w-full items-center justify-between bg-white px-10">
+      <div className="container flex min-w-full items-center justify-between bg-white px-28">
         <div className="tabs-left flex items-center">
-          <p className="pr-20 text-center text-xl font-extrabold text-transparent">
-            Aquapark Falka
-          </p>
           {tabsLeft.map(({ name, path }) => (
             <NavbarTab key={name} name={name} path={path} />
           ))}
@@ -56,9 +53,6 @@ const Navbar = () => {
           {tabsRight.map(({ name, path }) => (
             <NavbarTab key={name} name={name} path={path} />
           ))}
-          <p className="pr-20 text-center text-xl font-extrabold text-transparent">
-            Aquapark Falka
-          </p>
         </div>
       </div>
 
