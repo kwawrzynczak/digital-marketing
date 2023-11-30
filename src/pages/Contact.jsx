@@ -12,13 +12,13 @@ const Contact = () => {
           <div className="-ml-8 mb-8 mt-4 h-1 w-16 bg-amber-500"></div>
           <div className="flex h-full flex-col gap-4">
             <div className="border-b border-gray-300 pb-8">
-              <h3 className="mb-4 font-bold uppercase text-blue-600">Aquapark Falka</h3>
+              <h3 className="mb-4 font-bold uppercase text-blue-600">Aquapark Wyderka</h3>
               <div className="flex justify-between">
                 <div>
                   <p className="mb-4 font-semibold text-gray-600">Dane kontaktowe</p>
                   <span className="block border-l border-gray-300 p-3 text-[0.95rem]">
-                    <p className="text-gray-600">Email:</p>
-                    <p className="text-gray-600">Telefon:</p>
+                    <p className="text-gray-600">Email: wyderka@info.pl</p>
+                    <p className="text-gray-600">Telefon: +48 606506605</p>
                   </span>
                 </div>
                 <div>
@@ -36,8 +36,8 @@ const Contact = () => {
                 <div>
                   <p className="mb-4 font-semibold text-gray-600">Dane kontaktowe</p>
                   <span className="block border-l border-gray-300 p-3 text-[0.95rem]">
-                    <p className="text-gray-600">Email:</p>
-                    <p className="text-gray-600">Telefon:</p>
+                    <p className="text-gray-600">Email: wyderka@info.pl</p>
+                    <p className="text-gray-600">Telefon: +48 606506605</p>
                   </span>
                 </div>
                 <div>
@@ -55,8 +55,8 @@ const Contact = () => {
                 <div>
                   <p className="mb-4 font-semibold text-gray-600">Dane kontaktowe</p>
                   <span className="block border-l border-gray-300 p-3 text-[0.95rem]">
-                    <p className="text-gray-600">Email:</p>
-                    <p className="text-gray-600">Telefon:</p>
+                    <p className="text-gray-600">Email: wyderka@info.pl</p>
+                    <p className="text-gray-600">Telefon: +48 606506605</p>
                   </span>
                 </div>
                 <div>

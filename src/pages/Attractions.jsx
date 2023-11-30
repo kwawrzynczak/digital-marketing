@@ -1,12 +1,12 @@
 import AttractionTile from '../components/AttractionTile';
 
 const attractions = [
-  { name: 'Sauny' },
-  { name: 'Baseny' },
-  { name: 'Zjeżdżalnie' },
-  { name: 'Restauracje' },
-  { name: 'SPA' },
-  { name: 'Nocleg' },
+  { name: 'Sauny', img: 'sauna.jpg' },
+  { name: 'Baseny', img: 'basen.jpg' },
+  { name: 'Zjeżdżalnie', img: 'slide.jpg' },
+  { name: 'Restauracje', img: 'restauracja.jpg' },
+  { name: 'SPA', img: 'spa.jpg' },
+  { name: 'Nocleg', img: 'nocleg.jpg' },
 ];
 
 const Attractions = () => {
@@ -18,7 +18,7 @@ const Attractions = () => {
       </h1>
       <div className="grid grid-cols-1 gap-10 px-10 lg:grid-cols-2 xl:grid-cols-3">
         {attractions.map((attraction) => (
-          <AttractionTile key={attraction.name} name={attraction.name} />
+          <AttractionTile key={attraction.name} name={attraction.name} img={attraction.img} />
         ))}
       </div>
     </>

@@ -26,7 +26,7 @@ const PricingTable = ({ active = false, name = null, data, categories, sport = f
       <div
         className={twMerge(
           'flex border-4 bg-white',
-          active ? 'rounded-b-xl border-blue-600' : 'rounded-xl border-blue-200',
+          active ? 'rounded-b-xl border-blue-600' : 'rounded-xl border-amber-400',
         )}
       >
         {name && (

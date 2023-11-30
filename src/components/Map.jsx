@@ -15,7 +15,7 @@ const Map = () => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <Marker key="uniqueMarkerKey" position={position}>
-        <Popup>Aquapark Falka, ul. Wodna 15, Łódź</Popup>
+        <Popup>Aquapark Wyderka, ul. Wodna 15, Łódź</Popup>
       </Marker>
     </MapContainer>
   );

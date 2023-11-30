@@ -1,3 +1,4 @@
+import MainLayout from './layouts/MainLayout';
 import Attractions from './pages/Attractions';
 import Contact from './pages/Contact';
 import Events from './pages/Events';
@@ -8,13 +9,12 @@ import NotFound from './pages/NotFound';
 import Prices from './pages/Prices';
 import Feedback from './pages/Feedback';
 import Tickets from './pages/Tickets';
-import MainTemplate from './templates/MainTemplate';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
-      <MainTemplate>
+      <MainLayout>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/attractions" element={<Attractions />} />
@@ -27,7 +27,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </MainTemplate>
+      </MainLayout>
     </BrowserRouter>
   );
 }

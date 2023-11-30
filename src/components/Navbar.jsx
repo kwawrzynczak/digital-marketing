@@ -19,10 +19,6 @@ const tabsLeft = [
     name: 'Oferta',
     path: '/prices',
   },
-  {
-    name: 'Wydarzenia',
-    path: '/events',
-  },
 ];
 const tabsRight = [
   {
@@ -47,7 +43,10 @@ const Navbar = () => {
   return (
     <>
       <div className="container flex min-w-full items-center justify-between bg-white px-10">
-        <div className="tabs-left flex">
+        <div className="tabs-left flex items-center">
+          <p className="pr-20 text-center text-xl font-extrabold text-transparent">
+            Aquapark Falka
+          </p>
           {tabsLeft.map(({ name, path }) => (
             <NavbarTab key={name} name={name} path={path} />
           ))}
@@ -57,17 +56,18 @@ const Navbar = () => {
           {tabsRight.map(({ name, path }) => (
             <NavbarTab key={name} name={name} path={path} />
           ))}
+          <p className="pr-20 text-center text-xl font-extrabold text-transparent">
+            Aquapark Falka
+          </p>
         </div>
       </div>
-      <div
-        className="logo absolute left-1/2 top-0 box-content flex w-64 -translate-x-1/2 items-center justify-center rounded-full bg-white px-6 pb-6"
-        style={{ clipPath: 'ellipse(38% 48% at 50% 40%)' }}
+
+      <Link
+        to="/"
+        className="absolute left-1/2 top-0 flex -translate-x-1/2  flex-col items-center justify-center rounded-full bg-white p-3 "
       >
-        <Link to="/" className="flex flex-col items-center p-4">
-          <img src={'/logo.svg'} className="w-20" />
-          <p className="text-center text-xl font-extrabold text-blue-600">Aquapark Falka</p>
-        </Link>
-      </div>
+        <img src={'/logo.png'} className="w-28" />
+      </Link>
     </>
   );
 };

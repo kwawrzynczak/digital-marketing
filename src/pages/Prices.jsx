@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 const types = [
   {
     id: 1,
-    name: 'Aquapark Falka',
+    name: 'Aquapark Wyderka',
     header: 'Cennik Aquaparku',
     categories: ['1h', '3h', 'Cały dzień'],
     schedules: [
@@ -81,20 +81,6 @@ const types = [
         ],
       },
     ],
-  },
-  {
-    id: 4,
-    name: 'Aquafitness',
-    header: 'Cennik Aquafitness',
-    categories: [],
-    schedules: [],
-  },
-  {
-    id: 5,
-    name: 'Bilety grupowe',
-    header: 'Cennik Biletów Grupowych',
-    categories: [],
-    schedules: [],
   },
 ];
 
